@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/6qDf9TG7/logo.png">
+     <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <title>Chat Application</title>
+    <h1 class="title">I-Chat &#128172</h1>
+    <div class="main">
+      <div class="name">
+        <span><i class="fa-solid fa-user"></i> </span>
+        <input
+          type="text"
+          id="name-input"
+          class="name-input"
+          value="AzEe"
+          maxlength="20"
+        />
+      </div>
+      <ul class="message-container" id="message-containr">
+        <li class="message-left">
+          <p class="message">
+                 lorem impsun 
+            <span>bluebird &#128170 26 july 10:40</span>
+          </p>
+        </li>
+
+        <li class="message-right">
+          <p class="message">
+            lorem impsun
+            <span>bluebird &#128170 26 july 10:40</span>
+          </p>
+        </li>
+
+        <li class="message-feedback">
+          <p class="feedback" id="feedback">killer is typing a message</p>
+        </li>
+      </ul>
+
+      <form class="message-form" id="message-form">
+        <input type="text" name="message" id="message-input" class="message-input">
+        <div class="v-divider"></div>
+        <button type="submit" class="send-button">
+            SEND  <span><i class="fas fa-paper-plane"></i></span>
+        </button>
+      </form>
+    </div>
+    <h3 class="client-total" id="client-total">Total Clients : 2</h3>
+  </body>
+</html>
