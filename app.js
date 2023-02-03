@@ -13,9 +13,9 @@ let socketconnected = new Set();
 
 io.on("connection", onconnected);
 function onconnected(socket) {
-  console.log(socket.id);
+  // console.log(socket.id);
   socketconnected.add(socket.id);
-  console.log(socketconnected);
+  // console.log(socketconnected);
 
   io.emit("client-total", socketconnected.size);
 
@@ -23,5 +23,9 @@ function onconnected(socket) {
     console.log("socket disconnected", socket.id);
     socketconnected.delete(socket.id);
     io.emit("client-total", socketconnected.size);
+  });
+  socket.on("message", (data) => {
+    // console.log(data);
+    socket.broadcast.emit("chat-message", data);
   });
 }
